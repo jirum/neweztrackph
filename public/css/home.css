@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+
+    /* Hide the scrollbar for web content */
+    ::-webkit-scrollbar {
+        width: 0px;
+        /* Adjust the width as needed */
+    }
+}
+
+#sidebar {
+    width: 280px;
+    overflow-y: auto;
+    height: calc(100vh - 56px);
+    overflow-x: hidden;
+    font-size: 14px;
+}
+
+.fixed-top {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    /* You can adjust the background color as needed */
+    z-index: 1;
+    padding: 10px;
+}
+
+#searchVehicle {
+    width: 100%;
+    font-size: 12px;
+    background-size: 18px 18px;
+    /* Adjust the size as needed */
+    background-position: 230px center;
+    /* Adjust the position as needed */
+    background-repeat: no-repeat;
+}
+
+#vehicleCount {
+    color: #666;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#settingsButton {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(228, 228, 228)
+}
+
+.text-tooltip {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 85%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(77, 77, 77, 0.80);
+    color: #fff;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+#settingsButton:hover {
+    background-color: rgb(200, 200, 200) !important
+}
+
+#settingsButton:hover .text-tooltip {
+    display: block;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.popup-content {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    width: 200px;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.title {
+    font-size: 14px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px 10px 0 0;
+    margin: -10px -10px 5px -10px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.close-button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: -6px;
+    margin-right: -10px;    
+}
+
+.line {
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(45deg);
+}
+
+.line1 {
+    top: 50%;
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.line2 {
+    top: 50%;
+    left: 0;
+    transform: rotate(45deg);
+}
+
+
+.form-check.form-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.form-check-input {
+    order: 1;
+}
+
+.popup-content button {
+    cursor: pointer;
+}
+
+.formTitle {
+    font-weight: 600;
+    color: #666;
+    font-size: 13px;
+}
+
+.nav-item:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.carImg {
+    width: 100%;
+    height: 62px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.vplatenum {
+    color: #4C4C4C;
+    font-weight: 600;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 125px
+}
+
+.vStatDriving {
+    display: inline-block;
+    background-color: #24782D;
+    padding: 1px 5px;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+}
+
+.vStatIdling {
+    display: inline-block;
+    background-color: #E38800;
+    padding: 1px 5px;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+}
+
+.vStatStop {
+    display: inline-block;
+    background-color: #E30E00;
+    padding: 1px 5px;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+}
+
+.lastReport {
+    font-size: 13px;
+    color: #4C4C4C;
+    font-weight: 500;
+}
+
+.address {
+    color: #4C4C4C;
+    font-size: 14px;
+    text-align: start;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 260px;
+}
+
+.marker-label {
+    background-color: rgba(77, 77, 77, 0.70);
+    display: inline-flex;
+    padding: 3px 13px;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    border-radius: 7px;
+    color: #FFF !important;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.active {
+    border: 2px solid #F26722;
+    background: #f2f2f2;
+}
+
+.popupText {
+    font-size: 13px;
+    color: #4C4C4C;
+    margin-bottom: 5px;
+}
+
+.cluster-div {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.cluster-checkbox {
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+#noResultsMessage {
+    font-weight: 600;
+    display: none;
+}
+
+.showDetails {
+    position: fixed;
+    bottom: 0;
+    left: 280px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.closeShowDetails {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    position: absolute;
+    border-radius: 50%; /* Make it a circle */
+    background-color: #cfcfcf; /* Red color */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    right: 10px;
+    bottom: 220px;
+    display: none;
+}
+
+.x-symbol {
+    width: 45%; /* Adjust size of the X symbol */
+    height: 45%; /* Adjust size of the X symbol */
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.line {
+    position: absolute;
+    width: 2px; /* Adjust thickness of lines */
+    height: 100%; /* Adjust length of lines */
+    background-color: #fd6a45; /* White color */
+}
+
+.line:first-child {
+    transform: rotate(45deg); /* Rotate line to form diagonal */
+}
+
+.line:last-child {
+    transform: rotate(-45deg); /* Rotate line to form diagonal */
+}
+
+/* .daterangepicker {
+    top: auto !important;
+    bottom: 100% !important;
+} */
+/* 
+#infowindow {
+    font-size: 30px;
+} */
